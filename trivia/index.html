@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Trivia!</title>
+        <script>
+            document.addEventListener('DOMContentLoaded', function(){
+                let correct = document.querySelector('.correct');
+                let incorrects = document.querySelectorAll('.incorrect');
+                correct.addEventListener('click', function()
+                {
+                    correct.style.backgroundColor = 'green';
+                    for(let i = 0; i < incorrects.length; i += 1)
+                    {
+                        incorrects[i].style.backgroundColor = '#d9edff';
+                    };
+                    document.querySelector('#part1').innerHTML = 'Correct!';
+                });
+
+                for(let j = 0; j < incorrects.length; j += 1)
+                {
+                    incorrects[j].addEventListener('click', function(){
+                        incorrects[j].style.backgroundColor = 'red';
+                        document.querySelector('#part1').innerHTML = 'Incorrect!';
+                        correct.style.backgroundColor = '#d9edff';
+                        for(let k = 0; k < 3; k += 1)
+                        {
+                            if(k != j)
+                            {
+                                incorrects[k].style.backgroundColor = '#d9edff';
+                            };
+                        };
+                    });
+                }
+                document.querySelector('#check').addEventListener('click', function()
+                {
+                    let input = document.querySelector('input');
+                    if(input.value === 'Kalush')
+                    {
+                        input.style.backgroundColor = 'green';
+                        document.querySelector('#part2').innerHTML = 'Correct!';
+                    }
+                    else
+                    {
+                        input.style.backgroundColor = 'red';
+                        document.querySelector('#part2').innerHTML = 'Incorrect!';
+                    }
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <div class="header">
+            <h1>Trivia!</h1>
+        </div>
+
+        <div class="container">
+            <div class="section">
+                <h2>Part 1: Multiple Choice </h2>
+                <hr>
+                <h3>What New Year's song of the Ukrainian composer is sung by the whole world?</h3>
+                <button class="incorrect">Stefania</button>
+                <button class="correct">Shchedrik</button>
+                <button class="incorrect">2step</button>
+                <p id="part1"></p>
+            </div>
+
+            <div class="section">
+                <h2>Part 2: Free Response</h2>
+                <hr>
+                <h3>Which Ukrainian band won Eurovision 2022?</h3>
+                <input type="text"></input>
+                <button id="check">Check Answer</button>
+                <p id="part2"></p>
+            </div>
+        </div>
+    </body>
+</html>
