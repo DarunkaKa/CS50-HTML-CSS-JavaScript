@@ -14,8 +14,8 @@ wrong answers             |  correct answers
 Main page             |  Drama description page
 :-------------------------:|:-------------------------:
 ![home1](https://user-images.githubusercontent.com/90305008/208944127-bcf17c58-aa5b-4206-b275-10f0942e663b.png)  | ![home2](https://user-images.githubusercontent.com/90305008/208944177-ed25f57a-5a17-4563-ad4c-e7d1ba559c4e.png) 
-**Drama trailer viewing page** | **Drama viewing website page (an external site that you can go to)**
-![home3](https://user-images.githubusercontent.com/90305008/208944361-525f359a-0665-483b-b0ef-bb5fdb2fc4c4.png)   |  ![home4](https://user-images.githubusercontent.com/90305008/208944399-c7837a2a-4c55-48bd-a167-1bdb525dc8f5.png)
+**Drama trailer viewing page** 
+![home3](https://user-images.githubusercontent.com/90305008/208944361-525f359a-0665-483b-b0ef-bb5fdb2fc4c4.png)
 
 ## About CS50x
 >https://cs50.harvard.edu/x/2022/
